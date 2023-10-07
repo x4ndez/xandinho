@@ -55,16 +55,13 @@ export default function ViewPortfolio() {
 
         <>
 
-            {projects
+            {projects.length
                 ? projects.map((item, i) => {
                     return <Project
                         key={i}
                         projectData={item}
-                    // description={item.description}
-                    // repoUrl={item.repoUrl}
-                    // imgLink={item.imgLink}
                     />
-                }) : ""}
+                }) : "Loading... Feel free to make a coffee while you wait :)"}
 
         </>
 
