@@ -23,12 +23,20 @@ export default function ViewPortfolio() {
 
             for (let item of await response.json()) {
 
-
                 const projectData = {
                     name: item.name,
                     description: item.description,
                     repoUrl: item.html_url,
-                    imgLink: `https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.png`,
+                    imgLink: "",
+                }
+
+                if ((await fetch(`https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.png`)).status === 200) {
+                    projectData.imgLink = `https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.png`;
+                }
+                else if ((await fetch(`https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.gif`)).status === 200) {
+                    projectData.imgLink = `https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.gif`;
+                } else {
+                    projectData.imgLink = `https://as2.ftcdn.net/v2/jpg/05/62/99/31/1000_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg`;
                 }
 
                 array.push(projectData);
