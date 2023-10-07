@@ -1,18 +1,64 @@
+// --COMPONENTS
 import Header from "./components/Header";
 import Project from "./components/Project";
 
+// --STYLES
 import './styles/App.css';
 
-function App() {
+import { RouterProvider } from "react-router-dom";
+
+// --ROUTER SETUP
+import { createBrowserRouter } from "react-router-dom";
+
+// ---VIEWS
+import Index from "./components/Index";
+import ViewAboutMe from "./views/ViewAboutMe";
+import ViewContact from "./views/ViewContact";
+import ViewError from "./views/ViewError";
+import ViewIndex from "./views/ViewIndex";
+import ViewPortfolio from "./views/ViewPortfolio";
+import ViewResume from "./views/ViewResume";
+
+const router = createBrowserRouter([
+
+  {
+    path: "/",
+    element: <Index />,
+    errorElement: <ViewError />,
+    children: [
+      {
+        index: true,
+        element: <ViewIndex />,
+      },
+      {
+        path: "/about",
+        element: <ViewAboutMe />,
+      },
+      {
+        path: "/contact",
+        element: <ViewContact />,
+      },
+      {
+        path: "/resume",
+        element: <ViewResume />,
+      },
+      {
+        path: "/portfolio",
+        element: <ViewPortfolio />,
+      },
+    ]
+  }
+
+]);
+
+
+export default function App() {
 
   return (
     <>
-
-      <Header />
-      <Project />
-
+      <RouterProvider router={router}>
+        <Index />
+      </RouterProvider>
     </>
   );
 }
-
-export default App
