@@ -1,18 +1,62 @@
 import Project from "../components/Project"
 
+import { useState, useEffect } from "react";
+
 export default function ViewPortfolio() {
+
+    const [projects, setProjects] = useState([]);
+
+    async function getRepoData() {
+
+        if (projects.length === 0) {
+
+            const response = await fetch("https://api.github.com/users/x4ndez/repos", {
+
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+
+            });
+
+            const array = [];
+
+            for (let item of await response.json()) {
+
+
+                const projectData = {
+                    name: item.name,
+                    description: item.description,
+                    repoUrl: item.html_url,
+                    imgLink: `https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.png`,
+                }
+
+                array.push(projectData);
+
+            }
+
+            setProjects(array);
+
+        }
+
+    }
+
+    getRepoData();
 
     return (
 
         <>
 
-            Portfolio
-
-            <Project
-                name="Project 1"
-                imgLink="https://raw.githubusercontent.com/x4ndez/blogueiro/main/assets/screenshot.png"
-                description="Gone are the days of incredibly low-quality forums where people would abuse each other not in real-time. Well... I'm bringing it back, with Blogueiro! Come chat with a select few people, just don't insult x4ndez, he's a very power-hungry moderator and will probably ban you."
-            />
+            {projects
+                ? projects.map((item, i) => {
+                    return <Project
+                        key={i}
+                        projectData={item}
+                    // description={item.description}
+                    // repoUrl={item.repoUrl}
+                    // imgLink={item.imgLink}
+                    />
+                }) : ""}
 
         </>
 
