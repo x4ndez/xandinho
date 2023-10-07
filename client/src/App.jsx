@@ -1,4 +1,6 @@
 import Header from "./components/Header";
+import Project from "./components/Project";
+
 import './styles/App.css';
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
     <>
 
       <Header />
+      <Project />
 
     </>
   );
