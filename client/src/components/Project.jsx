@@ -1,14 +1,24 @@
-import { Outlet } from "react-router-dom";
+import "../styles/Project.css";
 
-export default function Project() {
+export default function Project(props) {
 
     return (
 
-        <main>
+        <>
 
-            <Outlet />
+            <div id="project">
 
-        </main>
+                <div className="overlay">
+
+                    <button>Click to View</button>
+
+                </div>
+
+                <img src={props.imgLink} />
+
+            </div>
+
+        </>
 
     );
 

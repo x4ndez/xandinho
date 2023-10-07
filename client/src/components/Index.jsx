@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Project from "./Project";
+import Main from "./Main";
 
 export default function Layout() {
 
@@ -7,7 +7,7 @@ export default function Layout() {
 
         <>
             <Header />
-            <Project />
+            <Main />
         </>
 
     );
