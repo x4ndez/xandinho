@@ -56,16 +56,23 @@ export default function ViewPortfolio() {
 
         <>
 
-            <h1>Portfolio</h1>
 
-            <div id="project-container">
-                {projects.length
-                    ? projects.map((item, i) => {
-                        return <Project
-                            key={i}
-                            projectData={item}
-                        />
-                    }) : "Loading... Just calling up GitHub. Feel free to make a coffee while you wait :)"}
+
+            <div id="wrapper">
+
+                <h1>Portfolio</h1>
+
+                <div id="project-container">
+
+                    {projects.length
+                        ? projects.map((item, i) => {
+                            return <Project
+                                key={i}
+                                projectData={item}
+                            />
+                        }) : "Loading... Just calling up GitHub. Feel free to make a coffee while you wait :)"}
+
+                </div>
 
             </div>
 
