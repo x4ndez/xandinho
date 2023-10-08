@@ -36,10 +36,11 @@ export default function Project(props) {
 
             {renderDetail()}
 
-            <div id="project">
+            <div className="project">
 
                 <div className="overlay">
 
+                    <h3>{props.projectData.name}</h3>
                     <button onClick={toggleDetailState}>Click to View</button>
 
                 </div>

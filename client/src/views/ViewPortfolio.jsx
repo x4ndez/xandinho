@@ -1,4 +1,5 @@
-import Project from "../components/Project"
+import Project from "../components/Project";
+import "../styles/ViewPortfolio.css";
 
 import { useState, useEffect } from "react";
 
@@ -55,13 +56,18 @@ export default function ViewPortfolio() {
 
         <>
 
-            {projects.length
-                ? projects.map((item, i) => {
-                    return <Project
-                        key={i}
-                        projectData={item}
-                    />
-                }) : "Loading... Feel free to make a coffee while you wait :)"}
+            <h1>Portfolio</h1>
+
+            <div id="project-container">
+                {projects.length
+                    ? projects.map((item, i) => {
+                        return <Project
+                            key={i}
+                            projectData={item}
+                        />
+                    }) : "Loading... Just calling up GitHub. Feel free to make a coffee while you wait :)"}
+
+            </div>
 
         </>
 
