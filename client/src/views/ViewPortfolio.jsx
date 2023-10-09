@@ -20,30 +20,29 @@ export default function ViewPortfolio() {
 
             });
 
-            const array = [];
+            const responseData = await response.json();
 
-            for (let item of await response.json()) {
-
+            const promiseArray = responseData.map(async (data) => {
                 const projectData = {
-                    name: item.name,
-                    description: item.description,
-                    repoUrl: item.html_url,
+                    name: data.name,
+                    description: data.description,
+                    repoUrl: data.html_url,
                     imgLink: "",
                 }
 
-                if ((await fetch(`https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.png`)).status === 200) {
-                    projectData.imgLink = `https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.png`;
+                if ((await fetch(`https://raw.githubusercontent.com/x4ndez/${data.name}/main/assets/screenshot.png`)).status === 200) {
+                    projectData.imgLink = `https://raw.githubusercontent.com/x4ndez/${data.name}/main/assets/screenshot.png`;
                 }
-                else if ((await fetch(`https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.gif`)).status === 200) {
-                    projectData.imgLink = `https://raw.githubusercontent.com/x4ndez/${item.name}/main/assets/screenshot.gif`;
+                else if ((await fetch(`https://raw.githubusercontent.com/x4ndez/${data.name}/main/assets/screenshot.gif`)).status === 200) {
+                    projectData.imgLink = `https://raw.githubusercontent.com/x4ndez/${data.name}/main/assets/screenshot.gif`;
                 } else {
                     projectData.imgLink = `https://as2.ftcdn.net/v2/jpg/05/62/99/31/1000_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg`;
                 }
 
-                array.push(projectData);
+                return projectData;
+            });
 
-            }
-
+            const array = await Promise.all(promiseArray);
             setProjects(array);
 
         }

@@ -4,8 +4,8 @@ body {
     height: 100vh;
     margin: 0;
 
-    background-image: url("../assets/img/background1.png");
-    background-size: 200%;
+    background-image: url("../assets/img/background2.png");
+    /* background-size: 200%; */
     background-position: 0%;
     background-repeat: no-repeat;
     background-color: black;
@@ -23,7 +23,6 @@ a {
 
 h1 {
 
-    margin: 3rem;
     font-size: 5rem;
 
     letter-spacing: 0.5rem;

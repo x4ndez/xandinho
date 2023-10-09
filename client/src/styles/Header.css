@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: center;
 
-    background-color: rgba(0, 0, 0, 0.534);
+    background-color: rgba(24, 0, 56, 0);
 
 }
 
@@ -31,7 +31,7 @@ header img {
     width: 100vw;
     height: 10vh;
 
-    background-color: rgba(12, 0, 41, 0.747);
+    background-color: rgba(0, 0, 0, 0.445);
 
     position: sticky;
     top: 0;
@@ -40,13 +40,14 @@ header img {
     align-items: center;
     z-index: 5;
 
-    transition: background-color 0.5s;
+    transition: background-color 0.5s, height 0.5s;
 
 }
 
 #sticky-nav:hover {
 
     background-color: rgba(12, 0, 41, 1);
+    height: 12vh;
 
 }
 
