@@ -2,6 +2,8 @@
 import Header from "./components/Header";
 import Project from "./components/Project";
 
+import { useState } from "react";
+
 // --STYLES
 import './styles/App.css';
 
@@ -15,7 +17,6 @@ import Index from "./components/Index";
 import ViewAboutMe from "./views/ViewAboutMe";
 import ViewContact from "./views/ViewContact";
 import ViewError from "./views/ViewError";
-import ViewIndex from "./views/ViewIndex";
 import ViewPortfolio from "./views/ViewPortfolio";
 import ViewResume from "./views/ViewResume";
 
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ViewIndex />,
+        element: <ViewAboutMe />,
       },
       {
         path: "/about",
@@ -50,7 +51,6 @@ const router = createBrowserRouter([
   }
 
 ]);
-
 
 export default function App() {
 
