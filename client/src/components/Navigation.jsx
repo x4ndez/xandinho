@@ -7,7 +7,9 @@ export default function Header() {
 
         <nav>
 
-            <span>
+            <span><div id="navLogo">[x]</div></span>
+
+            <span id="navLinks">
                 <NavLink to="/about" id="navAbout">About</NavLink>
                 <NavLink to="/portfolio" id="navPortfolio">Portfolio</NavLink>
                 <NavLink to="/contact" id="navContact">Contact</NavLink>
