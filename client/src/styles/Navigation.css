@@ -1,6 +1,6 @@
 nav {
 
-    width: 50%;
+    min-width: 50%;
 
     display: flex;
     justify-content: flex-end;
@@ -22,4 +22,3 @@ nav a:hover {
 
     font-size: 2rem;
 }
-
