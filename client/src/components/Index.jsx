@@ -1,8 +1,18 @@
+import { useState } from "react";
+
 import Header from "./Header";
+import Navigation from "./Navigation";
 import Main from "./Main";
-import ProjectDetail from "./ProjectDetail";
 
 export default function Layout() {
+
+    // const [footer, setFooter] = useState(0);
+
+    // function footerActive() {
+
+    //     if
+
+    // }
 
     return (
 
