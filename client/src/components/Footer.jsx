@@ -6,6 +6,27 @@ import LILogoUrl from "../assets/img/LI-icon.png";
 
 export default function Header() {
 
+    useEffect(() => {
+
+        const elFooter = document.querySelector("footer");
+
+        document.addEventListener("scroll", () => {
+
+            if (window.scrollY >= 100) {
+
+                elFooter.style.opacity = "1";
+
+
+            } else if (window.scrollY <= 99) {
+
+                elFooter.style.opacity = "0";
+
+            }
+
+        });
+
+    }, []);
+
     return (
 
         <>
