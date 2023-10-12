@@ -1,6 +1,6 @@
 # Xande.reactfolio
 
-![Screenshot of application](./assets/screenshot.png)
+![Screenshot of application](./assets/screenshot.gif)
 
 ## Description
 More technologies, more cats, more fetching (but, not by cats).  This is my portfolio, built with React!
