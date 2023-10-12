@@ -22,11 +22,14 @@ export default function ViewPortfolio() {
 
             const responseData = await response.json();
 
+            console.log(responseData);
+
             const promiseArray = responseData.map(async (data) => {
                 const projectData = {
                     name: data.name,
                     description: data.description,
                     repoUrl: data.html_url,
+                    homePage: data.homepage,
                     imgLink: "",
                 }
 
