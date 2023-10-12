@@ -1,11 +1,40 @@
-# React + Vite
+# Xande.reactfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Screenshot of application](./assets/screenshot.png)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
 
 
-background >> https://www.vecteezy.com/photo/11043975-starry-night-sky-and-milky-way-galaxy-with-stars-and-space-dust-in-the-universe
+## Table of Contents
+
+1. [Developer Comments](#developer-comments)
+2. [Deployed Application](#deployed-application)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contribution](#contribution)
+6. [Questions](#questions)
+
+## Developer Comments
+
+
+The acceptance criteria of this project were as follows:
+
+```md
+
+```
+
+## Deployed Application
+The deployed application can be viewed from the following link: <https://xande-portfolio.netlify.app/>.<br>
+
+## Usage
+
+
+## License
+![License Badge: License](https://img.shields.io/badge/License-MIT-blue)<br>
+This project is covered under the MIT License.
+
+## Contribution
+x4ndez: <https://github.com/x4ndez>
+
+## Questions
+Questions may be directed to my LinkedIn: <https://www.linkedin.com/in/alexandernanfro/>.

@@ -101,7 +101,7 @@ nav span {
 #navLogo {
 
     font-size: 2rem;
-
+    opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
 
 }
