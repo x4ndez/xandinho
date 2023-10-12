@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Navigation.css";
 
 export default function Header() {
@@ -8,15 +8,10 @@ export default function Header() {
         <nav>
 
             <span>
-                <Link to="/about">About</Link>
-                <Link to="/portfolio">Portfolio</Link>
-                <Link to="/contact">Contact</Link>
-                <Link to="/resume">Resume</Link>
-                {/* <a href="/about" id="nav-about">About Me</a>
-                <a href="/portfolio" id="nav-portfolio">Portfolio</a>
-                <a href="/contact" id="nav-contact">Contact</a>
-                <a href="/resume" id="nav-resume">Resume</a> */}
-
+                <NavLink to="/about" id="navAbout">About</NavLink>
+                <NavLink to="/portfolio" id="navPortfolio">Portfolio</NavLink>
+                <NavLink to="/contact" id="navContact">Contact</NavLink>
+                <NavLink to="/resume" id="navResume">Resume</NavLink>
             </span>
 
         </nav>

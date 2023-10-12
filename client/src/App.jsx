@@ -1,9 +1,3 @@
-// --COMPONENTS
-import Header from "./components/Header";
-import Project from "./components/Project";
-
-import { useState } from "react";
-
 // --STYLES
 import './styles/App.css';
 

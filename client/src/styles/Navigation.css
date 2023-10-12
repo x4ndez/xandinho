@@ -22,3 +22,9 @@ nav a:hover {
 
     font-size: 2rem;
 }
+
+nav a.active {
+
+    color: rgb(110, 0, 201);
+
+}
