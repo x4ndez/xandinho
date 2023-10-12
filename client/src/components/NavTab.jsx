@@ -11,19 +11,19 @@ export default function Header() {
 
         <>
 
-                <span id="logo">
+            <span id="logo">
 
-                    <span>[x]4ndez</span>
+                <span>[x]4ndez</span>
 
-                </span>
+            </span>
 
-                <span id="urls">
+            <span id="urls">
 
-                    <div><a href="https://www.linkedin.com/in/alexandernanfro/"><img id="LILogo" src={LILogoUrl} /></a></div>
-                    <div><a href="https://github.com/x4ndez"><img id="GHLogo" src={ghLogoUrl} /></a></div>
-                    <div><a href="https://github.com/x4ndez"><img id="SOLogo" src={SOLogoUrl} /></a></div>
+                <div><a href="https://www.linkedin.com/in/alexandernanfro/"><img id="LILogo" src={LILogoUrl} /></a></div>
+                <div><a href="https://github.com/x4ndez"><img id="GHLogo" src={ghLogoUrl} /></a></div>
+                <div><a href="https://stackoverflow.com/users/22729262/x4ndez"><img id="SOLogo" src={SOLogoUrl} /></a></div>
 
-                </span>
+            </span>
 
         </>
 
