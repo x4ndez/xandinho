@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { redirect } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 
 export default function ViewContact() {
+
+    const navigate = useNavigate();
 
     const validateEmail = new RegExp(
         "^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
@@ -103,7 +105,7 @@ export default function ViewContact() {
             msgIsValid) {
 
             alert("Message sent!  DEV NOTE: This is just an affirmation message that your input is all valid, your input will not be sent to the developer.");
-            redirect("/about");
+            navigate("/about");
 
         } else {
             alert("Message not sent!  Please make sure your email is valid and that all fields have content.");
