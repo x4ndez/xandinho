@@ -82,11 +82,24 @@ header span {
 #LILogo {
 
     filter: grayscale(100%);
-    transition: filter 0.4s;
+    transition: filter 0.5s;
 
 }
 
 #LILogo:hover {
 
     filter: grayscale(0%)
+}
+
+#GHLogo {
+
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+#GHLogo:hover {
+
+    opacity: 0.5;
+
 }

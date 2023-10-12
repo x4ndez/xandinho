@@ -1,0 +1,61 @@
+#content-container {
+
+    width: 90%;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    border-radius: 1.5rem;
+    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+#wrapper {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1 {
+
+    margin-left: 10rem;
+    width: 90%;
+
+}
+
+/* #bio-photo-container {
+
+    background-color: green;
+
+} */
+
+#bio-photo {
+
+    width: auto;
+    position: relative;
+    height: 20rem;
+    border-radius: 1rem;
+    margin: 2rem;
+
+    transition: transform 0.5s;
+
+}
+
+#bio-photo:hover {
+
+    transform: scale(1.05);
+
+}
+
+#p-container {
+
+    margin: 1rem 1rem 0 0;
+
+}

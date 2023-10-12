@@ -55,8 +55,6 @@ export default function ViewPortfolio() {
 
         <>
 
-
-
             <div id="wrapper">
 
                 <h1>Portfolio</h1>
