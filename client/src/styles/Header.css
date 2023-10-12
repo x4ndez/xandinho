@@ -1,4 +1,5 @@
-header {
+header,
+footer {
 
     width: 100vw;
     height: 5vh;
@@ -11,7 +12,8 @@ header {
 
 }
 
-header img {
+header img,
+footer img {
 
     width: auto;
     height: 3vh;
@@ -45,6 +47,7 @@ header img {
 }
 
 header span,
+footer span,
 nav span {
 
     width: 25%;
@@ -56,14 +59,12 @@ nav span {
 #logo {
 
     justify-content: flex-start;
-    /* background-color: green; */
 
 }
 
 #urls {
 
     justify-content: flex-end;
-    /* background-color: yellow; */
 
 }
 
@@ -85,14 +86,16 @@ nav span {
     filter: grayscale(0%)
 }
 
-#GHLogo {
+#GHLogo,
+#SOLogo {
 
     opacity: 1;
     transition: 0.5s;
 
 }
 
-#GHLogo:hover {
+#GHLogo:hover,
+#SOLogo:hover {
 
     opacity: 0.5;
 
