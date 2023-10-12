@@ -36,7 +36,7 @@ export default function ViewPortfolio() {
                 else if ((await fetch(`https://raw.githubusercontent.com/x4ndez/${data.name}/main/assets/screenshot.gif`)).status === 200) {
                     projectData.imgLink = `https://raw.githubusercontent.com/x4ndez/${data.name}/main/assets/screenshot.gif`;
                 } else {
-                    projectData.imgLink = `https://as2.ftcdn.net/v2/jpg/05/62/99/31/1000_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg`;
+                    projectData.imgLink = `https://github.com/x4ndez/xandinho/blob/main/client/src/assets/img/noimage.png?raw=true`;
                 }
 
                 return projectData;
