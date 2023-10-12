@@ -1,25 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "./Header";
-import Navigation from "./Navigation";
+import Footer from "./Footer";
 import Main from "./Main";
 
 export default function Layout() {
 
-    // const [footer, setFooter] = useState(0);
+    useEffect(() => {
 
-    // function footerActive() {
+        const elFooter = document.querySelector("footer");
 
-    //     if
+        document.addEventListener("scroll", () => {
 
-    // }
+            if (window.scrollY >= 100) {
+
+                elFooter.style.opacity = "1";
+
+            } else if (window.scrollY <= 99) {
+
+                elFooter.style.opacity = "0";
+
+            }
+
+        });
+
+    }, []);
+
+
 
     return (
 
         <>
-            <div>
+            <div id="index">
                 <Header />
                 <Main />
+                <Footer />
             </div>
         </>
 
