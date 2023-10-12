@@ -103,7 +103,7 @@ export default function ViewContact() {
             msgIsValid) {
 
             alert("Message sent!  DEV NOTE: This is just an affirmation message that your input is all valid, your input will not be sent to the developer.");
-            return redirect("/about");
+            redirect("/about");
 
         } else {
             alert("Message not sent!  Please make sure your email is valid and that all fields have content.");
