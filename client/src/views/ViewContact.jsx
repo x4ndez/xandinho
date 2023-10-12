@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ViewContact() {
 
@@ -102,7 +103,7 @@ export default function ViewContact() {
             msgIsValid) {
 
             alert("Message sent!  DEV NOTE: This is just an affirmation message that your input is all valid, your input will not be sent to the developer.");
-            window.location = "/about";
+            useNavigate("/about");
 
         } else {
             alert("Message not sent!  Please make sure your email is valid and that all fields have content.");
